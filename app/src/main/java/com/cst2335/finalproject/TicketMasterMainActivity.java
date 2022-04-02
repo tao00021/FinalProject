@@ -12,9 +12,11 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.cst2335.finalproject.databinding.ActivityTicketMasterMainBinding;
 
+
 public class TicketMasterMainActivity extends AppCompatActivity {
 
     private ActivityTicketMasterMainBinding binding;
+    static public NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class TicketMasterMainActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_search, R.id.navigation_info)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_ticket_master_main);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_ticket_master_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }

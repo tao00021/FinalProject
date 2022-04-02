@@ -1,6 +1,11 @@
 package com.cst2335.finalproject;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.util.Log;
+import android.widget.ImageView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -98,20 +103,36 @@ public class TicketMasterAPI {
         return (int)Math.ceil((double)totalNumberOfEvent(city,radius)/20.0);
     }
 
-    /**
-     * used to retrieve the image from web and term it into a drawable object
-     * @param url
-     * @return
-     */
-    public static Drawable LoadImageFromWebOperations(String url) {
-        try {
-            InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "src name");
-            return d;
-        } catch (Exception e) {
-            return null;
-        }
+
+    public static void LoadImageFromWebOperations(ImageView image,String link) {
+        new ImageLoader(image)
+                .execute(link);
     }
+
+        private static class ImageLoader extends AsyncTask<String, Void, Bitmap> {
+            ImageView bmImage;
+
+            public ImageLoader(ImageView bmImage) {
+                this.bmImage = bmImage;
+            }
+
+            protected Bitmap doInBackground(String... urls) {
+                String urldisplay = urls[0];
+                Bitmap mIcon11 = null;
+                try {
+                    InputStream in = new java.net.URL(urldisplay).openStream();
+                    mIcon11 = BitmapFactory.decodeStream(in);
+                } catch (Exception e) {
+                    Log.e("Error", e.getMessage());
+                    e.printStackTrace();
+                }
+                return mIcon11;
+            }
+
+            protected void onPostExecute(Bitmap result) {
+                bmImage.setImageBitmap(result);
+            }
+        }
 
     private static TicketMasterEvent eventConverter(JSONObject event,String city) throws JSONException {
         TicketMasterEvent result = new TicketMasterEvent();
@@ -119,7 +140,12 @@ public class TicketMasterAPI {
         result.setEventUrl(event.getString("url"));
         result.setID(event.getString("id"));
         result.setDate(event.getJSONObject("dates").getJSONObject("start").getString("localDate"));
-        result.setTime(event.getJSONObject("dates").getJSONObject("start").getString("localTime"));
+        try {
+            result.setTime(event.getJSONObject("dates").getJSONObject("start").getString("localTime"));
+        }
+        catch (JSONException e) {
+            result.setTime("N/A");
+        }
         try {
             result.setMinPrice(((JSONObject) event.getJSONArray("priceRanges").get(0)).getString("min"));
             result.setMaxPrice(((JSONObject) event.getJSONArray("priceRanges").get(0)).getString("max"));
@@ -133,4 +159,6 @@ public class TicketMasterAPI {
         result.setImageUrl(((JSONObject)event.getJSONArray("images").get(0)).getString("url"));
         return result;
     }
+
+
 }

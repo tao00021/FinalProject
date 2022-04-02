@@ -20,6 +20,6 @@ public interface TicketMasterEventDao {
     @Query("select * from TicketMasterEvent where city = :eventCity")
     List<TicketMasterEvent> getAllEventsFromCity(String eventCity);
 
-    @Query("delete from TicketMasterEvent where city = :eventCity")
-    void removeEventsFromCity(String eventCity);
+    @Query("delete from TicketMasterEvent where ID = :eventID")
+    void removeEvent(String eventID);
 }

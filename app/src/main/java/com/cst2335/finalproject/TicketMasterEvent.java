@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class TicketMasterEvent {
+public class TicketMasterEvent implements Serializable {
 
     String name;
     String city;

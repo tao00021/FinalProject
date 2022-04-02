@@ -19,9 +19,9 @@ public class TicketMasterDatabaseAPI {
     {
         database.eventDao().addEventToDB(newEvent);
     }
-    public void removeEventsFromCity(String city)
+    public void removeEvent(String eventID)
     {
-        database.eventDao().removeEventsFromCity(city);
+        database.eventDao().removeEvent(eventID);
     }
     public List<TicketMasterEvent> getAllEvents()
     {

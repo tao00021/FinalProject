@@ -4,20 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    >
 
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/textViewCityDB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="100dp"
+        android:text="@string/Text_city"
+        android:textColor="#ecbd9d"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/editTextCityDB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCityDB"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/Hint_city"
+        app:layout_constraintBottom_toTopOf="@id/textView2DB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCityDB" />
+
+
+    <TextView
+        android:id="@+id/textView2DB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Text_KM"
+        app:layout_constraintLeft_toRightOf="@id/editTextCityDB"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCityDB"
+        app:layout_constraintBottom_toTopOf="@id/button_searchDB"
+        />
+
+
+    <Button
+        android:id="@+id/button_searchDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/Text_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2DB" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

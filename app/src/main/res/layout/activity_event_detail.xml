@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".EventDetailActivity">
+
+
+    <TextView
+        android:id="@+id/textViewEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewEventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewEventPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewEventURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageViewEventPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/EventSaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="saveEvent"
+        android:text="Save" />
+
+
+</LinearLayout>

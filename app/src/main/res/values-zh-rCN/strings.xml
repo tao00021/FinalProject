@@ -13,5 +13,14 @@
     <string name="title_search">Search Events</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_info">About</string>
+
     <string name="text_search_fragment">This is search fragment</string>
+
+    <string name="Hint_city">Search by City</string>
+    <string name="Hint_radius">20</string>
+    <string name="Text_city">City:</string>
+    <string name="Text_radius">Radius:</string>
+    <string name="Text_search">Search</string>
+    <string name="Text_KM">KM</string>
+
 </resources>
