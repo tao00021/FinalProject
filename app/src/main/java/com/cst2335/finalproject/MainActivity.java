@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
          * to retrieve items from ticketMaster web server, and to save data to database.
          */
         //the following is used to get events from ticket master
+        /*
         List<TicketMasterEvent> eventFromTicketMasterFromOttawa=TicketMasterAPI.getEventsFromTicketmaster("Ottawa","25","1");
         List<TicketMasterEvent> eventFromTicketMasterFromToronto=TicketMasterAPI.getEventsFromTicketmaster("Toronto","25","1");
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         eventFromTicketMasterFromToronto=databaseAPI.getAllEventsForCity("Toronto");
         databaseAPI.removeEventsFromCity("Ottawa");
         eventFromTicketMasterFromOttawa=databaseAPI.getAllEventsForCity("Ottawa");//this should be zero
-
+        */
 
         Button buttonStart = (Button) findViewById(R.id.button_start);
         buttonStart.setOnClickListener(new View.OnClickListener() {
