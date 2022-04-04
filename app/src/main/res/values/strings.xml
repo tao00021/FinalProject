@@ -12,5 +12,10 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_info">About</string>
     <string name="text_search_fragment">This is search fragment</string>
+    
+    <string name="titlee_notifications">About Our Application</string>
+    <string name="notification_content">This application was created as part of the CST2355 course by students Wei Zheng, Ran Tao and Andres Pedroza. This app comunicates
+        with the API ticketmaster, with this information we populate the app with valuable information about the events the user wants to know (they have toselect a city
+        and the distance from the city).</string>
 
 </resources>
