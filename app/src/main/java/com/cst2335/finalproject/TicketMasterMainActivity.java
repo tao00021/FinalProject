@@ -1,6 +1,8 @@
 package com.cst2335.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,6 +19,7 @@ public class TicketMasterMainActivity extends AppCompatActivity {
 
     private ActivityTicketMasterMainBinding binding;
     static public NavController navController;
+    static public String homeCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,11 @@ public class TicketMasterMainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_ticket_master_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        Intent fromMain = getIntent();
+        homeCity = fromMain.getStringExtra("homeCity");
+        //EditText editTextUserEmail = (EditText)  findViewById(R.id.editTextUserEmail);
+        //editTextUserEmail.setText(emailAddr);
     }
 
 }

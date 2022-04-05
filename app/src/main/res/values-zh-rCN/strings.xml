@@ -4,7 +4,7 @@
     <string name="startbuton_name">开始</string>
     <string name="texttile_name">终极项目</string>
     <string name="textauthor_name">CST2355</string>
-    <string name="textprof_name">教授: Abul Qasim</string>
+    <string name="textprof_name">教授: Abul Qasim, Samira Quaaz</string>
     <string name="textstudent_name">xues: Wei Zheng, Ran Tao, Andres Pedroza</string>
 
     <string name="title_activity_ticket_master_main">TicketMasterMainActivity</string>
@@ -22,5 +22,7 @@
     <string name="Text_radius">Radius:</string>
     <string name="Text_search">Search</string>
     <string name="Text_KM">KM</string>
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textHomeCity_name">Home City:</string>
+    <string name="Hint_homecity">Input Your Home City</string>
 </resources>

@@ -3,7 +3,7 @@
     <string name="startbuton_name">Start</string>
     <string name="texttile_name">Final Project</string>
     <string name="textauthor_name">CST2355</string>
-    <string name="textprof_name">Professor: Abul Qasim</string>
+    <string name="textprof_name">Professor: Abul Qasim, Samira Quaaz </string>
     <string name="textstudent_name">Students: Wei Zheng, Ran Tao, Andres Pedroza </string>
     <string name="title_activity_ticket_master_main">TicketMasterMainActivity</string>
     <string name="title_home">Home</string>
@@ -20,5 +20,8 @@
     <string name="Text_KM">KM</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textHomeCity_name">Home City:</string>
+
+    <string name="Hint_homecity">Input Your Home City</string>
 
 </resources>
