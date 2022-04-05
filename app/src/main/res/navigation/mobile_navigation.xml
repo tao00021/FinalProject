@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
+        android:id="@+id/navigation_searchresult"
+        android:name="com.cst2335.finalproject.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search_result" />
+
+    <fragment
         android:id="@+id/navigation_info"
         android:name="com.cst2335.finalproject.ui.notifications.NotificationsFragment"
         android:label="@string/title_info"
