@@ -21,13 +21,14 @@ import com.cst2335.finalproject.TicketMasterMainActivity;
 import com.cst2335.finalproject.databinding.FragmentHomeBinding;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
-    public List<com.cst2335.finalproject.TicketMasterEvent> ticketMasterEvents;
+    public List<com.cst2335.finalproject.TicketMasterEvent> ticketMasterEvents = new ArrayList<com.cst2335.finalproject.TicketMasterEvent>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class HomeFragment extends Fragment {
         String City = TicketMasterMainActivity.homeCity;
         String Radius = "50";
 
-        ticketMasterEvents = com.cst2335.finalproject.TicketMasterAPI.getEventsFromTicketmaster(City, Radius,"1");
+        //ticketMasterEvents = com.cst2335.finalproject.TicketMasterAPI.getEventsFromTicketmaster(City, Radius,"1");
 
         // instantiate the custom list adapter
         MyListAdapter adapter = new MyListAdapter(root.getContext(), ticketMasterEvents);
