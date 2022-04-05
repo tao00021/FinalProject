@@ -12,6 +12,7 @@ public class NotificationsViewModel extends ViewModel {
         mText = new MutableLiveData<>();
         mText.setValue("Know more about our APP" +
                 "                       This application is the final project for the CST2335 Course");
+
     }
 
     public LiveData<String> getText() {
