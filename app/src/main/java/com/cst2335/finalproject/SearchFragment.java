@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -73,7 +74,16 @@ public class SearchFragment extends Fragment {
         searchButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                TicketMasterMainActivity.navController.navigate(R.id.navigation_searchresult);
+                Intent searchResultActivity = new Intent(getActivity(), SearchResultActivity.class);
+
+                EditText cityName = (EditText)  root.findViewById(R.id.editTextCity);
+                searchResultActivity.putExtra("City", cityName.getText().toString());
+
+                EditText radius = (EditText)  root.findViewById(R.id.editTextRadius);
+                searchResultActivity.putExtra("Radius", radius.getText().toString());
+
+                startActivity(searchResultActivity);
+
             }
         });
         return root;

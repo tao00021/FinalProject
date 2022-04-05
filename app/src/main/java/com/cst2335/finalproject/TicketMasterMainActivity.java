@@ -12,6 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.cst2335.finalproject.databinding.ActivityTicketMasterMainBinding;
 
+
 public class TicketMasterMainActivity extends AppCompatActivity {
 
     private ActivityTicketMasterMainBinding binding;
@@ -28,7 +29,7 @@ public class TicketMasterMainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_search, R.id.navigation_info, R.id.navigation_searchresult)
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_search, R.id.navigation_info)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_ticket_master_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
